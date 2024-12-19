@@ -1,0 +1,99 @@
+body {
+    background: url(./images/dragonbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex; /* Apply Flexbox */ 
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center horizontally */ 
+    align-items: center; /* Center vertically */ 
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */ 
+    margin: 0;
+  }
+  
+  body::before { 
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: inherit; /* Inherit the background properties from the body */ 
+    filter: blur(5px); /* Adjust the blur level as needed */ 
+    z-index: -1; /* Ensure the pseudo-element is behind other content */ 
+  }
+
+  #text {
+    background-color: #0a0a2384;
+    color: #ffffff;
+    padding: 10px;
+  }
+  
+  #game {
+    background-color: #ffffff00;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensures #game is above the pseudo-element */ 
+    z-index: 1;
+    display: flex; flex-direction: column; align-items: center; /* Center horizontally */
+  }
+
+  .block {
+    margin-top: 70px; /* Add margin to push the block content below the fixed navbar */ 
+    width: 500px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; /* Center horizontally */ 
+    justify-content: center; /* Center vertically */ 
+    padding: 10px; 
+    background-color: #ffffff3f; 
+    color: #ffffff;
+  }
+  
+  #controls,
+  #monsterStats {
+    padding: 5px; 
+    color: #0a0a23; 
+    margin: 10px 0
+  }
+
+  #stats {
+    width: 100vw; 
+    position: fixed; /* Fixes the navbar at the top */ 
+    top: 0; 
+    display: flex; 
+    justify-content: space-around; 
+    background-color: #0a0a23ad; 
+    padding: 10px; 
+    color: #ffffff; 
+    font-size: 40px; 
+    z-index: 2; /* Ensures the navbar is above other content */
+  }
+  
+  #monsterStats {
+    display: none;
+    color: #ffffff;
+    background-color: #c70d0d;
+  }
+  
+  .stat {
+    padding-right: 10px;
+  }
+
+  #text {
+    text-align: center;
+  }
+  
+  .title {
+    color: tomato;
+    font-weight: 900;
+    font-size: 25px;
+  }
+
+  button {
+    cursor: pointer;
+    color: #0a0a23;
+    background-color: #feac32;
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    border: 3px solid #feac32;
+  }
